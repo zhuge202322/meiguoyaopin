@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-ink antialiased;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  h1, h2, h3, h4 {
+    @apply tracking-tight text-ink;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 22s linear infinite;
+}
+.animate-marquee-slow {
+  animation: marquee 35s linear infinite;
+}
+.marquee-pause:hover .animate-marquee,
+.marquee-pause:hover .animate-marquee-slow {
+  animation-play-state: paused;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md bg-[#1E7FFF] px-8 py-3 text-sm font-semibold text-white transition hover:bg-[#1666CC] focus:outline-none focus:ring-2 focus:ring-[#1E7FFF]/40;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-md border border-ink/15 bg-white px-8 py-3 text-sm font-semibold text-ink transition hover:border-[#1E7FFF] hover:text-[#1E7FFF];
+  }
+  .input {
+    @apply w-full rounded-md border border-slate-300 bg-white px-4 py-3 text-ink placeholder:text-slate-400 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30;
+  }
+  .label {
+    @apply block text-sm font-semibold text-ink mb-1.5;
+  }
+  .hint {
+    @apply text-xs text-brand mt-1;
+  }
+  .req::after {
+    content: " *";
+    @apply text-red-500;
+  }
+}
+
+.legal-prose h2 {
+  @apply mt-10 mb-3 text-[22px] font-bold text-[#212322];
+}
+.legal-prose h3 {
+  @apply mt-7 mb-2 text-[17px] font-bold text-[#212322];
+}
+.legal-prose p { @apply mb-4; }
+.legal-prose ul { @apply list-disc pl-6 mb-4 space-y-1.5; }
+.legal-prose ol { @apply list-decimal pl-6 mb-4 space-y-1.5; }
+.legal-prose a { @apply text-[#1E7FFF] underline; }
+.legal-prose strong { @apply font-bold text-[#212322]; }
