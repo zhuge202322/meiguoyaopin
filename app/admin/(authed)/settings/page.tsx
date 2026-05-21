@@ -2,6 +2,7 @@ import { getSupportEmail } from "@/lib/settings";
 import { revalidatePath } from "next/cache";
 import { prisma } from "@/lib/db";
 import { SettingsForm } from "./SettingsForm";
+import { ChangePasswordForm } from "./ChangePasswordForm";
 
 async function updateSupportEmail(formData: FormData) {
   "use server";
@@ -26,9 +27,16 @@ export default async function SettingsPage() {
         <p className="text-gray-500 mt-1">Manage global configurations for the website.</p>
       </div>
 
-      <div className="bg-white p-6 rounded-lg shadow-sm max-w-2xl">
-        <h2 className="text-lg font-semibold mb-4">Contact Information</h2>
-        <SettingsForm defaultEmail={email} updateAction={updateSupportEmail} />
+      <div className="grid gap-8 max-w-2xl">
+        <div className="bg-white p-6 rounded-lg shadow-sm">
+          <h2 className="text-lg font-semibold mb-4">Contact Information</h2>
+          <SettingsForm defaultEmail={email} updateAction={updateSupportEmail} />
+        </div>
+
+        <div className="bg-white p-6 rounded-lg shadow-sm">
+          <h2 className="text-lg font-semibold mb-4">Change Password</h2>
+          <ChangePasswordForm />
+        </div>
       </div>
     </div>
   );
