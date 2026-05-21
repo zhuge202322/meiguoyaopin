@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Mail, Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 
 export default function ContactPage() {
   return (
@@ -14,7 +14,6 @@ export default function ContactPage() {
         </p>
         <div className="mt-8 space-y-3 text-ink-soft">
           <p className="flex items-center gap-3"><Mail className="text-brand" size={18}/> reliontomx@Gmail.com</p>
-          <p className="flex items-center gap-3"><Phone className="text-brand" size={18}/> (000) 000-0000</p>
         </div>
         <form className="mt-10 grid gap-4">
           <div>
