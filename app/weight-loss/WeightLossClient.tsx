@@ -29,7 +29,9 @@ export default function WeightLossClient() {
       
       <style dangerouslySetInnerHTML={{__html: `
         @media (max-width: 767px) {
-          img[src*="d9a2270a"] {
+          #brxe-cicoiv,
+          #brxe-zofmtc,
+          #brxe-vhvulp {
             display: none !important;
           }
           img[src*="optimized-myfastrx"], img[src*="hipaa"] {
@@ -42,7 +44,9 @@ export default function WeightLossClient() {
             width: auto !important;
             margin: 0 10px !important;
           }
-          #brxe-tqdhzj {
+          #brxe-tqdhzj,
+          #brxe-vifuwg,
+          #brxe-lkvpnv {
             text-align: center;
           }
         }
