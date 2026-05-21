@@ -30,11 +30,20 @@ export default function WeightLossClient() {
       <style dangerouslySetInnerHTML={{__html: `
         @media (max-width: 767px) {
           img[src*="d9a2270a"] {
-            object-fit: cover !important;
-            height: 100% !important;
+            display: none !important;
           }
           img[src*="optimized-myfastrx"], img[src*="hipaa"] {
             object-fit: contain !important;
+            height: auto !important;
+            width: 100px !important;
+          }
+          .v67h63an {
+            display: inline-block !important;
+            width: auto !important;
+            margin: 0 10px !important;
+          }
+          #brxe-tqdhzj {
+            text-align: center;
           }
         }
       `}} />
