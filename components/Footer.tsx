@@ -77,7 +77,7 @@ export default function Footer() {
 
       <div className="container pb-8">
         <p className="text-[11px] leading-relaxed text-[#9ca3af] max-w-5xl">
-          MyFastRx is a registered trademark of MyFastRx Health LLC. Individual results may vary; weight loss
+          NewFastRx is a registered trademark of NewFastRx Health LLC. Individual results may vary; weight loss
           is not guaranteed. Results depend on multiple factors including starting weight, adherence to
           treatment, diet, and lifestyle. GLP-1 medications may not be appropriate for everyone. A medical
           consultation is required, and prescriptions are issued at the discretion of a licensed U.S.
@@ -86,11 +86,11 @@ export default function Footer() {
           accordance with applicable regulations. Pricing: advertised monthly rates reflect discounted
           pricing with multi-month or annual plans billed upfront; standard monthly pricing may be higher.
           Actual pricing, savings, and available plans may vary. Shipping times may vary based on provider
-          approval, pharmacy processing, and location. MyFastRx does not accept insurance. All services are
+          approval, pharmacy processing, and location. NewFastRx does not accept insurance. All services are
           cash-pay.
         </p>
         <p className="mt-6 text-[12px] text-[#9ca3af]">
-          © {new Date().getFullYear()} MyFastRx Health LLC. All Rights Reserved.
+          © {new Date().getFullYear()} NewFastRx Health LLC. All Rights Reserved.
         </p>
       </div>
     </footer>

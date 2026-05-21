@@ -6,9 +6,9 @@ export default function AboutPage() {
     <>
       <Header />
       <main className="container py-20">
-        <h1 className="text-4xl md:text-5xl font-extrabold">About MyFastRx</h1>
+        <h1 className="text-4xl md:text-5xl font-extrabold">About NewFastRx</h1>
         <p className="mt-6 text-lg text-ink-soft max-w-2xl">
-          MyFastRx is your comprehensive health and wellness partner. We coordinate virtual medical
+          NewFastRx is your comprehensive health and wellness partner. We coordinate virtual medical
           consultations with U.S.-licensed physicians and deliver cost-effective, high-quality
           prescriptions directly to your home.
         </p>

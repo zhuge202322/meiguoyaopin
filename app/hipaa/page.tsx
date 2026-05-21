@@ -1,6 +1,6 @@
 import LegalLayout from "@/components/LegalLayout";
 
-export const metadata = { title: "HIPAA Notice of Privacy Practices — MyFastRx" };
+export const metadata = { title: "HIPAA Notice of Privacy Practices — NewFastRx" };
 
 export default function HipaaPage() {
   return (

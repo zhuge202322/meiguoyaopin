@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "MyFastRx — Online Doctor Visits & Rx Delivery",
+  title: "NewFastRx — Online Doctor Visits & Rx Delivery",
   description:
-    "Skip the waiting room. MyFastRx connects you to licensed doctors online for quick consultations, prescriptions, and home delivery - fast, secure, and discreet.",
+    "Skip the waiting room. NewFastRx connects you to licensed doctors online for quick consultations, prescriptions, and home delivery - fast, secure, and discreet.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

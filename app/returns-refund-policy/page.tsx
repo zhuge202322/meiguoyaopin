@@ -1,6 +1,6 @@
 import LegalLayout from "@/components/LegalLayout";
 
-export const metadata = { title: "Returns & Refund Policy — MyFastRx" };
+export const metadata = { title: "Returns & Refund Policy — NewFastRx" };
 
 export default function ReturnsPage() {
   return (

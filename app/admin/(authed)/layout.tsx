@@ -4,7 +4,7 @@ import { getAdminSession } from "@/lib/auth";
 import Logo from "@/components/Logo";
 import { Package, LayoutDashboard, LogOut } from "lucide-react";
 
-export const metadata = { title: "Admin · MyFastRx" };
+export const metadata = { title: "Admin · NewFastRx" };
 
 export default async function AdminAuthedLayout({
   children,

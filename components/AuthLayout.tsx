@@ -37,7 +37,7 @@ export default function AuthLayout({
         </div>
 
         <p className="text-[12px] text-[#9ca3af]">
-          © 2026 MyFastRx Health LLC.{" "}
+          © 2026 NewFastRx Health LLC.{" "}
           <Link href="/privacy" className="hover:text-[#1E7FFF]">Privacy</Link>{" "}
           ·{" "}
           <Link href="/terms" className="hover:text-[#1E7FFF]">Terms</Link>

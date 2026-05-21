@@ -1,6 +1,6 @@
 import LegalLayout from "@/components/LegalLayout";
 
-export const metadata = { title: "Privacy Policy — MyFastRx" };
+export const metadata = { title: "Privacy Policy — NewFastRx" };
 
 export default function PrivacyPage() {
   return (

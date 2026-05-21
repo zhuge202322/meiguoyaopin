@@ -1,6 +1,6 @@
 import LegalLayout from "@/components/LegalLayout";
 
-export const metadata = { title: "SMS Terms and Conditions — MyFastRx" };
+export const metadata = { title: "SMS Terms and Conditions — NewFastRx" };
 
 export default function SmsTermsPage() {
   return (

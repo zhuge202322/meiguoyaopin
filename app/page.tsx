@@ -7,16 +7,16 @@ import { Monitor, ClipboardList, Truck, ArrowRight } from "lucide-react";
 
 const HOME_FAQ = [
   {
-    q: "What is MyFastRx?",
-    a: "MyFastRx is a telehealth platform that pairs you with U.S.-licensed physicians for online consultations and home-delivered prescription care. Doctors review your medical history, prescribe when appropriate, and our partner pharmacy ships your medication directly to your door.",
+    q: "What is NewFastRx?",
+    a: "NewFastRx is a telehealth platform that pairs you with U.S.-licensed physicians for online consultations and home-delivered prescription care. Doctors review your medical history, prescribe when appropriate, and our partner pharmacy ships your medication directly to your door.",
   },
   {
-    q: "What is the MyFastRx process?",
+    q: "What is the NewFastRx process?",
     a: "Pick your treatment, complete a short medical intake, and a licensed doctor reviews your case — usually within 24 hours. If approved, your medication is shipped free and discreetly. Some states require a brief video or live-chat consult, which we arrange for you.",
   },
   {
-    q: "How much does MyFastRx cost?",
-    a: "Pricing is flat and transparent. Most members find MyFastRx significantly cheaper than other online programs and even local pharmacies — with free shipping always included and no insurance required.",
+    q: "How much does NewFastRx cost?",
+    a: "Pricing is flat and transparent. Most members find NewFastRx significantly cheaper than other online programs and even local pharmacies — with free shipping always included and no insurance required.",
   },
 ];
 
@@ -58,7 +58,7 @@ export default function HomePage() {
                 ))}
               </ul>
 
-              <p className="mt-7 font-bold text-[14px] text-[#212322]">Healthcare made simple by MyFastRx.</p>
+              <p className="mt-7 font-bold text-[14px] text-[#212322]">Healthcare made simple by NewFastRx.</p>
 
               <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-[13px] text-[#212322]">
                 {["Free Online Consultation", "Trusted Medications", "Free Discreet Delivery"].map((t, i) => (

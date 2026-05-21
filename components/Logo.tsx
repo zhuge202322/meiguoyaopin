@@ -8,7 +8,7 @@ export default function Logo({
   width?: number;
 }) {
   return (
-    <Link href="/" className={`inline-block ${className}`} aria-label="MyFastRx home">
+    <Link href="/" className={`inline-block ${className}`} aria-label="NewFastRx home">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/images/logo-myfastrx-1.png"
@@ -16,7 +16,7 @@ export default function Logo({
         sizes={`${width}px`}
         width={width}
         height={Math.round((width * 142) / 454)}
-        alt="MyFastRx"
+        alt="NewFastRx"
         className="block h-auto w-auto"
         style={{ maxWidth: width }}
         loading="eager"

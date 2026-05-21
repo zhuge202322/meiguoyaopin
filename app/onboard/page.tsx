@@ -245,7 +245,7 @@ function Step1({ form, update }: { form: Form; update: (p: Partial<Form>) => voi
           <input type="checkbox" className="mt-1 h-4 w-4" checked={form.smsTransactional}
             onChange={(e) => update({ smsTransactional: e.target.checked })} />
           <span>
-            I agree to receive transactional text messages from MyFastRx at the number provided
+            I agree to receive transactional text messages from NewFastRx at the number provided
             regarding appointment reminders, treatment updates, prescription notifications, and
             account alerts. Message frequency may vary. Message &amp; data rates may apply. Reply STOP
             to opt out. Reply HELP for help.*
@@ -256,7 +256,7 @@ function Step1({ form, update }: { form: Form; update: (p: Partial<Form>) => voi
           <input type="checkbox" className="mt-1 h-4 w-4" checked={form.smsMarketing}
             onChange={(e) => update({ smsMarketing: e.target.checked })} />
           <span>
-            I agree to receive recurring marketing text messages from MyFastRx at the number
+            I agree to receive recurring marketing text messages from NewFastRx at the number
             provided, including promotions and special offers. Consent is not a condition of
             purchase. Message frequency may vary. Message &amp; data rates may apply. Reply STOP to
             opt out. Reply HELP for help.

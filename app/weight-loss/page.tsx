@@ -3,9 +3,9 @@ import Footer from "@/components/Footer";
 import WeightLossClient from "./WeightLossClient";
 
 export const metadata = {
-  title: "Personalized GLP-1 Weight Loss | Flat Pricing by MyFastRx",
+  title: "Personalized GLP-1 Weight Loss | Flat Pricing by NewFastRx",
   description:
-    "Doctor-guided GLP-1 weight loss from MyFastRx. One flat price for any dose, free doctor consult and discreet shipping. Start your free visit today.",
+    "Doctor-guided GLP-1 weight loss from NewFastRx. One flat price for any dose, free doctor consult and discreet shipping. Start your free visit today.",
 };
 
 export default function WeightLossPage() {

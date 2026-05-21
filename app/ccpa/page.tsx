@@ -1,6 +1,6 @@
 import LegalLayout from "@/components/LegalLayout";
 
-export const metadata = { title: "CCPA Opt-Out — MyFastRx" };
+export const metadata = { title: "CCPA Opt-Out — NewFastRx" };
 
 export default function CcpaPage() {
   return (

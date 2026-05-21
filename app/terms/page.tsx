@@ -1,6 +1,6 @@
 import LegalLayout from "@/components/LegalLayout";
 
-export const metadata = { title: "Terms of Use — MyFastRx" };
+export const metadata = { title: "Terms of Use — NewFastRx" };
 
 export default function TermsPage() {
   return (
