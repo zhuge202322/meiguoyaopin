@@ -36,10 +36,14 @@ export default function WeightLossClient() {
           }
 
           /* Completely hide HIPAA and LegitScript logos on mobile to prevent squishing */
-          .v67h63an,
           #brxe-hnjmly, #brxe-vkrgug, #brxe-ylrzxp, #brxe-xskrsc, #brxe-rvlqde, #brxe-uwacyv,
           #brxe-yhikss, #brxe-rxipln, #brxe-ltylfc, #brxe-ymerpc, #brxe-whwbil, #brxe-onjivc {
             display: none !important;
+          }
+
+          /* DO NOT hide .v67h63an completely, just hide the image children we don't want */
+          .v67h63an img {
+             display: none !important;
           }
 
           /* Ensure the specific text is visible and has a higher z-index to prevent occlusion */
