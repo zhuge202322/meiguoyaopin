@@ -35,6 +35,13 @@ export default function WeightLossClient() {
             display: none !important;
           }
 
+          /* Completely hide HIPAA and LegitScript logos on mobile to prevent squishing */
+          .v67h63an,
+          #brxe-hnjmly, #brxe-vkrgug, #brxe-ylrzxp, #brxe-xskrsc, #brxe-rvlqde, #brxe-uwacyv,
+          #brxe-yhikss, #brxe-rxipln, #brxe-ltylfc, #brxe-ymerpc, #brxe-whwbil, #brxe-onjivc {
+            display: none !important;
+          }
+
           /* Ensure the specific text is visible and has a higher z-index to prevent occlusion */
           #brxe-lseuqx, #brxe-drrkkx, #brxe-inhlhg, #brxe-oflgfv {
             position: relative !important;
@@ -42,19 +49,12 @@ export default function WeightLossClient() {
             display: block !important;
           }
 
-          /* Layout the button and badges vertically and centered */
+          /* Layout the button vertically and centered */
           #brxe-tqdhzj, #brxe-vifuwg, #brxe-lkvpnv {
             display: flex !important;
             flex-direction: column !important;
             align-items: center !important;
             gap: 15px !important;
-          }
-
-          /* Constrain the HIPAA and LegitScript badge images */
-          .v67h63an img {
-            object-fit: contain !important;
-            max-width: 140px !important;
-            height: auto !important;
           }
         }
       `}} />
