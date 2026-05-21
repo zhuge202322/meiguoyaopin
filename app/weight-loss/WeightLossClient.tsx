@@ -27,6 +27,18 @@ export default function WeightLossClient() {
       <link rel="stylesheet" href="/css/animate-layer.min.css" />
       <link rel="stylesheet" href="/css/weight-loss-inline.css" />
       
+      <style dangerouslySetInnerHTML={{__html: `
+        @media (max-width: 767px) {
+          img[src*="d9a2270a"] {
+            object-fit: cover !important;
+            height: 100% !important;
+          }
+          img[src*="optimized-myfastrx"], img[src*="hipaa"] {
+            object-fit: contain !important;
+          }
+        }
+      `}} />
+
       <div 
         dangerouslySetInnerHTML={{ __html: weightLossHtml }} 
         className="bricks-is-frontend wp-embed-responsive"

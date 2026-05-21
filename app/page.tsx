@@ -37,7 +37,7 @@ export default function HomePage() {
         <section className="bg-[#F3F3F3]">
           <div className="container py-12 md:py-16 grid md:grid-cols-[1fr_1fr] gap-8 items-center">
             {/* Left: text */}
-            <div className="md:pl-12 max-w-xl md:justify-self-end">
+            <div className="relative z-20 md:pl-12 max-w-xl md:justify-self-end">
               <h1 className="text-[36px] md:text-[44px] font-bold leading-[1.2] text-[#212322]">
                 Fast, Easy Healthcare.<br />Right From Home
               </h1>
@@ -81,9 +81,9 @@ export default function HomePage() {
             </div>
 
             {/* Right: doctor photo with blue circle backdrop */}
-            <div className="relative h-[460px] md:h-[600px] flex items-end justify-center">
+            <div className="relative h-[400px] md:h-[600px] flex items-end justify-center mt-6 md:mt-0">
               {/* Circle backdrop */}
-              <div className="absolute left-1/2 top-[55%] -translate-x-1/2 -translate-y-1/2 h-[400px] w-[400px] md:h-[500px] md:w-[500px] rounded-full bg-[#D7E7FF]" />
+              <div className="absolute left-1/2 top-[55%] -translate-x-1/2 -translate-y-1/2 h-[350px] w-[350px] md:h-[500px] md:w-[500px] rounded-full bg-[#D7E7FF]" />
               {/* Doctor — head pokes above circle top */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -91,7 +91,7 @@ export default function HomePage() {
                 alt="Licensed online doctor consultation"
                 width={604}
                 height={938}
-                className="relative z-10 max-h-[600px] w-auto object-contain"
+                className="relative z-10 max-h-[400px] md:max-h-[600px] w-auto object-contain"
                 loading="eager"
               />
             </div>
