@@ -29,25 +29,61 @@ export default function WeightLossClient() {
       
       <style dangerouslySetInnerHTML={{__html: `
         @media (max-width: 767px) {
-          #brxe-cicoiv,
-          #brxe-zofmtc,
-          #brxe-vhvulp {
+          /* Ensure the specific text is visible and on top */
+          #brxe-lseuqx, #brxe-drrkkx, #brxe-inhlhg, #brxe-oflgfv {
+            display: block !important;
+            position: relative !important;
+            z-index: 50 !important;
+            font-size: 28px !important;
+            line-height: 1.2 !important;
+            margin: 20px 0 !important;
+            text-align: center !important;
+          }
+
+          /* Hide the wide image wrappers that might be squishing into a barcode */
+          #brxe-oduppb, #brxe-eatqqu, #brxe-ktisnw,
+          #brxe-cicoiv, #brxe-zofmtc, #brxe-vhvulp {
             display: none !important;
           }
-          img[src*="optimized-myfastrx"], img[src*="hipaa"] {
+
+          /* Fix container layout to prevent horizontal squishing */
+          #brxe-vitypq, #brxe-zcmzzm, #brxe-dddzjv, #brxe-bxklqm {
+            display: flex !important;
+            flex-direction: column !important;
+            width: 100% !important;
+            overflow: hidden !important;
+            background: none !important;
+          }
+
+          /* Remove any weird pseudo-elements that might cause background artifacts */
+          #brxe-vitypq::before, #brxe-vitypq::after {
+            display: none !important;
+          }
+
+          /* Lay out the button and logos vertically */
+          #brxe-tqdhzj, #brxe-vifuwg, #brxe-lkvpnv {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            width: 100% !important;
+            gap: 15px !important;
+          }
+
+          /* Fix wrapper classes for images */
+          .v67h63an {
+            display: flex !important;
+            justify-content: center !important;
+            width: 100% !important;
+            margin: 0 !important;
+          }
+
+          /* Constrain the HIPAA and LegitScript images */
+          img[src*="optimized-myfastrx-2"], img[src*="hipaa"] {
             object-fit: contain !important;
             height: auto !important;
-            width: 100px !important;
-          }
-          .v67h63an {
-            display: inline-block !important;
-            width: auto !important;
-            margin: 0 10px !important;
-          }
-          #brxe-tqdhzj,
-          #brxe-vifuwg,
-          #brxe-lkvpnv {
-            text-align: center;
+            max-width: 150px !important;
+            display: block !important;
+            margin: 0 auto !important;
           }
         }
       `}} />
