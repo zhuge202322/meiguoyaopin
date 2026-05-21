@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import Script from "next/script";
 import { faqHtml } from "./content";
 
-export default function FaqClient() {
+export default function FaqClient({ supportEmail }: { supportEmail: string }) {
   useEffect(() => {
     // Bricks scripts rely on DOMContentLoaded. In Next.js, this event has already fired.
     // We dispatch it manually to trigger Bricks initialization for things like Accordions.
@@ -17,6 +17,8 @@ export default function FaqClient() {
     return () => clearTimeout(timer);
   }, []);
 
+  const html = faqHtml.replace(/reliontomx@Gmail\.com/gi, supportEmail);
+
   return (
     <>
       <link rel="stylesheet" href="/css/frontend-layer.min.css" />
@@ -28,7 +30,7 @@ export default function FaqClient() {
       <link rel="stylesheet" href="/css/faq-inline.css" />
       
       <div 
-        dangerouslySetInnerHTML={{ __html: faqHtml }} 
+        dangerouslySetInnerHTML={{ __html: html }} 
         className="bricks-is-frontend wp-embed-responsive"
       />
       

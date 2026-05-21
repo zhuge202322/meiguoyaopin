@@ -2,7 +2,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { getAdminSession } from "@/lib/auth";
 import Logo from "@/components/Logo";
-import { Package, LayoutDashboard, LogOut } from "lucide-react";
+import { Package, LayoutDashboard, LogOut, Settings } from "lucide-react";
 
 export const metadata = { title: "Admin · NewFastRx" };
 
@@ -26,6 +26,9 @@ export default async function AdminAuthedLayout({
           </SideLink>
           <SideLink href="/admin/orders" icon={<Package size={16} />}>
             All Orders
+          </SideLink>
+          <SideLink href="/admin/settings" icon={<Settings size={16} />}>
+            Settings
           </SideLink>
         </nav>
         <div className="p-3 border-t border-white/10">
