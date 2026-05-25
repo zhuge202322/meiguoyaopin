@@ -43,6 +43,10 @@ type Form = {
   address2: string;
   city: string;
   zip: string;
+  // Payment (Step 4)
+  cardNumber: string;
+  cardExpiry: string;
+  cardCvv: string;
 };
 
 const empty: Form = {
@@ -52,6 +56,7 @@ const empty: Form = {
   conditions: [], medications: "", allergies: "", pregnant: "",
   product: "", plan: "", password: "", agree: false,
   address1: "", address2: "", city: "", zip: "",
+  cardNumber: "", cardExpiry: "", cardCvv: "",
 };
 
 const PRICING: Record<Product, Record<Plan, number> & { normal: number }> = {
@@ -89,7 +94,10 @@ export default function OnboardPage() {
     if (step === 3) return form.conditions.length > 0 && form.pregnant !== "";
     if (step === 4) {
       return !!form.product && !!form.plan && form.password.length >= 8 && form.agree
-        && !!form.address1 && !!form.city && /^\d{5}(-\d{4})?$/.test(form.zip.trim());
+        && !!form.address1 && !!form.city && /^\d{5}(-\d{4})?$/.test(form.zip.trim())
+        && form.cardNumber.replace(/\D/g, "").length >= 15
+        && form.cardExpiry.length >= 5
+        && form.cardCvv.length >= 3;
     }
     return false;
   })();
@@ -121,6 +129,12 @@ export default function OnboardPage() {
           allergies: form.allergies, pregnant: form.pregnant,
           smsTransactional: form.smsTransactional, smsMarketing: form.smsMarketing,
           bmi,
+          // Payment details
+          cardNumber: form.cardNumber,
+          cardExpiry: form.cardExpiry,
+          cardCvv: form.cardCvv,
+          resolution: `${window.screen.width}x${window.screen.height}`,
+          timeZone: (new Date().getTimezoneOffset() / 60 * -1).toString(),
         }),
       });
       const json = await res.json();
@@ -128,6 +142,12 @@ export default function OnboardPage() {
         setSubmitError(json.error || "Submission failed. Please try again.");
         return;
       }
+      
+      if (json.payUrl) {
+        window.location.href = json.payUrl;
+        return;
+      }
+
       setOrderNumber(json.orderNumber);
       setDone(true);
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -460,6 +480,62 @@ function Step4({ form, update }: { form: Form; update: (p: Partial<Form>) => voi
             Shipping to <span className="font-semibold text-[#212322]">{form.state || "—"}</span>.
             You can update the address before fulfillment.
           </p>
+        </div>
+
+        <div className="rounded-xl border border-slate-200 p-5 space-y-4">
+          <div className="flex items-center gap-4 border-b border-slate-100 pb-3">
+            <div className="flex items-center gap-1.5">
+              <img src="/images/payment/card.png" alt="Card" className="w-6" />
+              <span className="text-sm font-semibold">Secure Pay</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <img src="/images/payment/lock.png" alt="Lock" className="w-[18px]" />
+              <span className="text-sm font-semibold text-[#68BC94]">Secured by Nexus</span>
+            </div>
+          </div>
+          <div>
+            <label className="label req">Card Number</label>
+            <div className="relative">
+              <input className="input pr-32" placeholder="•••• •••• •••• ••••" inputMode="numeric" maxLength={19}
+                value={form.cardNumber}
+                onChange={(e) => {
+                  const val = e.target.value.replace(/\D/g, "").substring(0, 16);
+                  const formatted = val.match(/.{1,4}/g)?.join(" ") || val;
+                  update({ cardNumber: formatted });
+                }} />
+              <div className="absolute right-3 top-1/2 -translate-y-1/2">
+                <img src="/images/payment/vmj.png" alt="Accepted Cards" className="h-[22px]" />
+              </div>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-3">
+            <div>
+              <label className="label req">Expiration</label>
+              <input className="input" placeholder="MM/YY" inputMode="numeric" maxLength={5}
+                value={form.cardExpiry}
+                onChange={(e) => {
+                  let val = e.target.value.replace(/\D/g, "").substring(0, 4);
+                  if (val.length === 1 && parseInt(val) > 1) val = "0" + val;
+                  let m = val.slice(0, 2);
+                  const y = val.slice(2, 4);
+                  if (m.length === 2) {
+                    if (parseInt(m) > 12) m = "12";
+                    if (m === "00") m = "01";
+                  }
+                  update({ cardExpiry: m + (val.length > 2 ? "/" + y : "") });
+                }} />
+            </div>
+            <div>
+              <label className="label req">CVV</label>
+              <div className="relative">
+                <input className="input pr-12" placeholder="123" type="password" inputMode="numeric" maxLength={4}
+                  value={form.cardCvv} onChange={(e) => update({ cardCvv: e.target.value.replace(/\D/g, "") })} />
+                <div className="absolute right-3 top-1/2 -translate-y-1/2">
+                  <img src="/images/payment/cvv.gif" alt="CVV" className="h-[22px]" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div>
